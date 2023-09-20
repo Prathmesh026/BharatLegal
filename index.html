@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bharat Legal</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="logo.png" alt="Your Logo">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> Recent</a></li>
+                <li><a href="#"><i class="fas fa-network-wired"></i> Network</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> My</a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+     
+        <section class="slider">
+            <div class="slide">
+                <img src="image1.png" alt="Advertisement 1">
+                <div class="slogan">
+                    <h1>Your Legal Needs, Our Expertise</h1>
+                    <p>Providing legal solutions with excellence</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image2.png" alt="Advertisement 2">
+                <div class="slogan">
+                    <h1>Advocating for Your Rights</h1>
+                    <p>Experienced advocates on your side</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image3.png" alt="Advertisement 3">
+                <div class="slogan">
+                    <h1>Mediating Conflicts, Finding Solutions</h1>
+                    <p>Skilled mediators to resolve disputes</p>
+                </div>
+            </div>
+        </section>
+<div class="slider-dots"></div>
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var currentSlide = 0;
+        var slides = $(".slide");
+        var dots = $(".slider-dot");
+
+        // Function to show a slide
+        function showSlide(index) {
+            slides.hide();
+            slides.eq(index).show();
+            dots.removeClass("active");
+            dots.eq(index).addClass("active");
+        }
+
+        // Initial setup
+        showSlide(currentSlide);
+
+        // Click event for the dots
+        dots.click(function () {
+            currentSlide = $(this).index();
+            showSlide(currentSlide);
+        });
+
+        // Automatic slide change
+        setInterval(function () {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);  
+    });
+    
+function openMessaging(vendorName) {
+    document.getElementById("vendor-name").textContent = vendorName;
+    document.getElementById("messaging-container").classList.remove("hidden");
+}
+
+function closeMessaging() {
+    document.getElementById("messaging-container").classList.add("hidden");
+}
+
+function sendMessage() {
+    const messageInput = document.getElementById("message-input");
+    const messages = document.getElementById("messages");
+    const messageText = messageInput.value.trim();
+
+    if (messageText) {
+        const message = document.createElement("div");
+        message.className = "message";
+        message.textContent = messageText;
+        messages.appendChild(message);
+
+        messageInput.value = "";
+    }
+}
+
+</script>
+ 
+ 
+<section class="categories">
+    
+    <div class="category">
+        <div class="category-icon">
+            <i class="fas fa-balance-scale"></i>
+        </div>
+        <h2>Lawyer</h2>
+    </div>
+    <div class="category">
+        <div class="category-icon">
+            <i class="fas fa-gavel"></i>
+        </div>
+        <h2>Advocate</h2>
+    </div>
+    <div class="category">
+        <div class="category-icon">
+            <i class="fas fa-handshake"></i>
+        </div>
+        <h2>Mediator</h2>
+    </div>
+    <div class="category">
+        <div class="category-icon">
+            <i class="fas fa-balance-scale"></i>
+        </div>
+        <h2>Arbitrators</h2>
+    </div>
+    <div class="category">
+        <div class="category-icon">
+            <i class="fas fa-stamp"></i>
+        </div>
+        <h2>Notaries</h2>
+    </div>
+    <div class="category">
+        <div class="category-icon">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <h2>Document Writers</h2>
+    </div>
+</section>
+ 
+     
+
+    <section class="vendors">
+        <div class="vendor">
+            <div class="vendor-profile">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </div>
+            <div class="vendor-info">
+                <h3>Vendor Name 1</h3>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i> 
+                </div>
+                <p>Specialized in: Service 1, Service 2</p>
+                <p>Experience: 5 years</p>
+                <button class="request-button">Send Request</button>
+            </div>
+        </div>
+       
+ 
+
+ 
+ 
+ 
+
+    <section class="vendors">
+        <div class="vendor">
+            <div class="vendor-profile">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </div>
+            <div class="vendor-info">
+                <h3>Vendor Name 1</h3>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>  
+                </div>
+                <p>Specialized in: Service 1, Service 2</p>
+                <p>Experience: 5 years</p>
+                <button class="request-button">Send Request</button>
+            </div>
+        </div>
+      
+    </section>
+
+     
+ 
+  
+
+    <section class="vendors">
+        <div class="vendor">
+            <div class="vendor-profile">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </div>
+            <div class="vendor-info">
+                <h3>Vendor Name 1</h3>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>  
+                </div>
+                <p>Specialized in: Service 1, Service 2</p>
+                <p>Experience: 5 years</p>
+                <button class="request-button">Send Request</button>
+            </div>
+        </div>
+  
+ 
+
+ 
+
+    <section class="vendors">
+        <div class="vendor">
+            <div class="vendor-profile">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </div>
+            <div class="vendor-info">
+                <h3>Vendor Name 1</h3>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>  
+                </div>
+                <p>Specialized in: Service 1, Service 2</p>
+                <p>Experience: 5 years</p>
+                <button class="request-button">Send Request</button>
+            </div>
+        </div>
+   
+    </section>
+
+   
+ 
+
+    <section class="vendors">
+        <div class="vendor">
+            <div class="vendor-profile">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </div>
+            <div class="vendor-info">
+                <h3>Vendor Name 1</h3>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>  
+                </div>
+                <p>Specialized in: Service 1, Service 2</p>
+                <p>Experience: 5 years</p>
+                <button class="request-button">Send Request</button>
+            </div>
+        </div>
+ 
+    </section>
+
+ 
+    <section class="vendors">
+        <div class="vendor">
+            <div class="vendor-profile">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </div>
+            <div class="vendor-info">
+                <h3>Vendor Name 1</h3>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>  
+                </div>
+                <p>Specialized in: Service 1, Service 2</p>
+                <p>Experience: 5 years</p>
+                <button class="request-button">Send Request</button>
+            </div>
+        </div>
+ 
+    </section>
+
+ 
+    <section class="vendors">
+        <div class="vendor">
+            <div class="vendor-profile">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </div>
+            <div class="vendor-info">
+                <h3>Vendor Name 1</h3>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>  
+                <p>Specialized in: Service 1, Service 2</p>
+                <p>Experience: 5 years</p>
+                <button class="request-button">Send Request</button>
+            </div>
+        </div>
+       
+    </section>
+
+  
+    <section class="vendors">
+        <div class="vendor">
+            <div class="vendor-profile">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </div>
+            <div class="vendor-info">
+                <h3>Vendor Name 1</h3>
+                <div class="vendor-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i> 
+                </div>
+                <p>Specialized in: Service 1, Service 2</p>
+                <p>Experience: 5 years</p>
+                <button class="request-button">Send Request</button>
+            </div>
+        </div>
+ 
+    </section>
+ 
+<section class="vendors">
+    <div class="vendor">
+       
+        <button class="request-button" onclick="openMessaging('Vendor Name 1')">Send Request</button>
+    </div>
+ 
+</section>
+
+ 
+<div id="messaging-container" class="hidden">
+    <div id="messaging-header">
+        <span id="vendor-name"></span>
+        <button id="close-messaging" onclick="closeMessaging()">Close</button>
+    </div>
+    <div id="messages"></div>
+    <input id="message-input" type="text" placeholder="Type your message...">
+    <button id="send-message" onclick="sendMessage()">Send</button>
+</div>
+
+ 
+ 
+ 
+</body>
+</html>
+ 
